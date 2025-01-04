@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+        <a href="beranda.html" class="logo"><img src="./asset/logo_pasa.png" alt="Logo pasa" ></a>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="cari_jasa.html">Cari Jasa</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        
+        <a href="login.html" class="btn_login">Login</a>
+    </header>
+
+    <content>
+        <div class="for-login">
+            <div class="wrapper">
+                <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                <div class="form-box login">
+                    <h2>Login</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="gmail" required="">
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">Remember me</label>
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn"> <a href="home.html">Login</a> </button>
+                        <div class="login-register">
+                            <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="form-box register">
+                    <h2>Registration</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="person"></ion-icon></span>
+                            <input type="text" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="gmail" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">I agree to the terms & conditions</label>
+                            
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <div class="login-register">
+                            <p>Already have an account?<a href="#" class="login-link">Login</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </content>
+
+    <footer class="footer">
+        <div class="footer_content">
+            <a href="tentang_pasa.html"><img src="./asset/logo_pasa.png" alt=""></a>
+            <span><p>PASA adalah situs mencari jasa dengan fitur gratis sewa jasa untuk pengguna baru</p></span>
+            <div class="icons">
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+        <div class="footer_content">
+            <h4>Penyedia Jasa</h4>
+            <li><a href="#">Beriklan dengan kami</a></li>
+            <li><a href="#">Buat CV</a></li>
+        </div>
+        <div class="footer_content">
+            <h4>Penyedia Jasa</h4>
+            <li><a href="#">Cari penyedia jasa</a></li>
+            <li><a href="#">Layanan</a></li>
+            <li><a href="#">Tips mencari jasa</a></li>
+        </div>
+    </footer>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const wrapper = document.querySelector('.wrapper');
+        const loginLink = document.querySelector('.login-link');
+        const registerLink = document.querySelector('.register-link');
+
+        if (wrapper && loginLink && registerLink) {
+        registerLink.addEventListener('click', () => {
+        wrapper.classList.add('active');
+        });
+
+        loginLink.addEventListener('click', () => {
+        wrapper.classList.remove('active');
+        });
+        }
+    </script>
+
+</body>
+
+
+
+</html>
